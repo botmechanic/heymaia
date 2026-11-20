@@ -90,8 +90,8 @@ const typeRows = [
 export default function TypeSpecimenPage() {
   return (
     <div className="bg-canvas text-ink">
-      <header className="border-b border-hairline">
-        <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-5 py-5 md:px-8">
+      <header className="border-b border-hairline px-5 md:px-8">
+        <div className="mx-auto flex w-full min-w-0 max-w-[1200px] items-center justify-between gap-4 py-5">
           <div>
             <p className="type-label text-ink-muted">Specimen · v2</p>
             <h1 className="type-h3 mt-2">Typography and tokens</h1>
@@ -105,7 +105,11 @@ export default function TypeSpecimenPage() {
         </div>
       </header>
 
-      <main id="main" className="mx-auto max-w-[1200px] px-5 py-12 md:px-8 md:py-16">
+      <div className="px-5 md:px-8">
+      <main
+        id="main"
+        className="mx-auto w-full min-w-0 max-w-[1200px] py-12 md:py-16"
+      >
         <section className="border-b border-hairline pb-16">
           <p className="type-label text-ink-muted">01 — Type scale</p>
           <p className="type-lead prose-measure mt-4 text-ink-muted">
@@ -263,6 +267,7 @@ export default function TypeSpecimenPage() {
           </p>
         </section>
       </main>
+      </div>
     </div>
   );
 }

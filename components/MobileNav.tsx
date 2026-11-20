@@ -48,9 +48,12 @@ export function MobileNav() {
       {open ? (
         <div
           id="mobile-nav"
-          className="absolute inset-x-0 top-full border-b border-hairline bg-canvas px-5 py-4"
+          className="absolute inset-x-0 top-full border-b border-hairline bg-canvas px-5 py-4 md:px-8"
         >
-          <nav aria-label="Mobile" className="mx-auto flex max-w-6xl flex-col gap-1">
+          <nav
+            aria-label="Mobile"
+            className="mx-auto flex w-full min-w-0 max-w-6xl flex-col gap-1"
+          >
             {nav.links.map((item) => (
               <a
                 key={item.href}
