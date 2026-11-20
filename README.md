@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# heymaia.app
 
-## Getting Started
+Static marketing site for [Maia](https://github.com/botmechanic/maia), a privacy-first on-device AI companion for Android.
 
-First, run the development server:
+This project is a Next.js App Router app configured for a fully static export. There is no server runtime, no API routes, and no analytics, cookies, or third-party scripts.
+
+## Requirements
+
+- Node.js 20+ (LTS recommended)
+- npm
+
+## Develop
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Edit copy and links in [`content/site.ts`](content/site.ts). Components read from that file so you can change wording without touching layout code.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Lint and build
 
-## Learn More
+```bash
+npm run lint
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+`npm run build` writes a static site to `out/`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploy the static export
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Point any static host at the `out/` directory after `npm run build`.
 
-## Deploy on Vercel
+### Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Framework preset: Next.js
+- Build command: `npm run build`
+- Output directory: `out`
+- Or connect the repo and let Vercel detect the project; with `output: 'export'` the deploy is static.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Netlify
+
+- Build command: `npm run build`
+- Publish directory: `out`
+- Optional `netlify.toml`:
+
+```toml
+[build]
+  command = "npm run build"
+  publish = "out"
+```
+
+### Cloudflare Pages
+
+- Build command: `npm run build`
+- Build output directory: `out`
+- Node version: 20 or newer
+
+### GitHub Pages
+
+1. Build with `npm run build`.
+2. Publish the contents of `out/` (for example via GitHub Actions `peaceiris/actions-gh-pages` or the Pages “upload artifact” workflow).
+3. If the site is served from a project subdirectory, set `basePath` in `next.config.ts` and rebuild. The production site for heymaia.app is expected at the domain root.
+
+## Site privacy
+
+This site uses no cookies, analytics, or trackers. Fonts are self-hosted at build time via `next/font`. Theme preference is stored in `localStorage` only.
+
+## Related
+
+- App source: [botmechanic/maia](https://github.com/botmechanic/maia)
+- Open TODOs for this site: [docs/TODOS.md](docs/TODOS.md)
+- Screenshots: [docs/screenshots/v1/](docs/screenshots/v1/)
