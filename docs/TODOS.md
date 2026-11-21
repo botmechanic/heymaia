@@ -2,7 +2,7 @@
 
 ## Product / content
 
-- Swap the HTML/CSS phone mock (`components/PhoneMock.tsx`) for real app screenshots once capture assets are ready.
+- Real app screenshots are live (`public/01_talk.png` … `04_privacy_settings.png`). Replace or refresh them when the UI changes.
 - Revisit the optional embedding-model download step when the app README ships a working URL. The TensorFlow Hub link currently listed in the Maia README returns 404; the site intentionally does not invent a replacement.
 - When GitHub Releases publishes an APK (or Play listing goes live), update install step 1 and set `PLAY_STORE_URL` in `content/site.ts` (currently `null`, so Play copy is omitted).
 

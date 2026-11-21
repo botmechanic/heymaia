@@ -1,4 +1,5 @@
 import { links, privacy } from "@/content/site";
+import { AppScreenshot } from "../AppScreenshot";
 import { Card } from "../Card";
 import { CodeBlock } from "../CodeBlock";
 import { Orb } from "../Orb";
@@ -15,18 +16,27 @@ export function Privacy() {
         {privacy.title}
       </h2>
 
-      <ul className="mt-12 grid gap-6 md:grid-cols-3">
-        {privacy.statements.map((item) => (
-          <li key={item.title}>
-            <h3 className="text-[18px] leading-7 font-medium text-ink">
-              {item.title}
-            </h3>
-            <p className="mt-2 text-[15px] leading-6 text-ink-muted md:text-[16px] md:leading-7">
-              {item.body}
-            </p>
-          </li>
-        ))}
-      </ul>
+      <div className="mt-12 grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-14">
+        <ul className="grid gap-6 sm:grid-cols-3 lg:grid-cols-1 lg:gap-8">
+          {privacy.statements.map((item) => (
+            <li key={item.title}>
+              <h3 className="text-[18px] leading-7 font-medium text-ink">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-[15px] leading-6 text-ink-muted md:text-[16px] md:leading-7">
+                {item.body}
+              </p>
+            </li>
+          ))}
+        </ul>
+
+        <AppScreenshot
+          src={privacy.screenshot.src}
+          alt={privacy.screenshot.alt}
+          caption={privacy.screenshot.caption}
+          className="lg:sticky lg:top-28"
+        />
+      </div>
 
       <Card className="mt-12">
         <h3 className="font-display text-[24px] leading-8 font-medium text-ink">

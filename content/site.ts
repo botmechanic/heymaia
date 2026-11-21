@@ -35,24 +35,42 @@ export const nav = {
   githubLabel: "View on GitHub",
 } as const;
 
+export const screenshots = {
+  talk: {
+    src: "/01_talk.png",
+    alt: "Maia chat screen showing an on-device conversation with Listen and Report actions.",
+    caption: "Talk · on device",
+  },
+  remembers: {
+    src: "/02_remembers.png",
+    alt: "Maia memory vault listing profile facts you can keep, edit, or forget.",
+    caption: "Remembers · edit or forget",
+  },
+  mindmap: {
+    src: "/03_mindmap.png",
+    alt: "Maia Explore view showing a mind map of related memories on the phone.",
+    caption: "Remembers · explore",
+  },
+  privacy: {
+    src: "/04_privacy_settings.png",
+    alt: "Maia privacy and security settings with biometric vault lock and zero-network status.",
+    caption: "Settings · privacy & security",
+  },
+} as const;
+
 export const hero = {
   overline: "Open source · Android · Runs fully on your phone",
   headline: "She remembers. She protects. She's yours.",
   subline: metadataCopy.description,
   primaryCta: { label: "Get Maia on GitHub", href: links.github },
   secondaryCta: { label: "How it works", href: "#how-it-works" },
-  phone: {
-    header: "Maia · On device",
-    userMessage: "Long morning. Finally walked around the reservoir.",
-    maiaReply:
-      "The air usually clears your head after a week like this.",
-    memoryChip: "Remembered · you walk when you need to think",
-  },
+  screenshot: screenshots.talk,
 } as const;
 
 export const privacy = {
   id: "privacy",
   title: "Private isn't a setting. It's how she's built.",
+  screenshot: screenshots.privacy,
   statements: [
     {
       title: "No internet permission",
@@ -96,10 +114,12 @@ export const howItWorks = {
     {
       title: "Every memory links back to the moment she learned it",
       body: "Facts she extracts keep pointers to the conversation they came from, so you can see the source. Facts you add yourself may not have a source yet.",
+      screenshot: screenshots.mindmap,
     },
     {
       title: "Edit or forget anything, anytime",
       body: "Open the memory vault to edit or remove what she holds. The background distillation job that reviews recent chats runs while the phone is charging. You can also run distillation immediately from Settings or Memory.",
+      screenshot: screenshots.remembers,
     },
   ],
 } as const;

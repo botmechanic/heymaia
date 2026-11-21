@@ -1,4 +1,5 @@
 import { howItWorks } from "@/content/site";
+import { AppScreenshot } from "../AppScreenshot";
 import { FlowDiagram } from "../FlowDiagram";
 import { Orb } from "../Orb";
 import { Section } from "../Section";
@@ -18,15 +19,22 @@ export function HowItWorks() {
         <FlowDiagram />
       </div>
 
-      <div className="mt-10 grid gap-8 md:grid-cols-2">
+      <div className="mt-10 grid gap-10 md:grid-cols-2 md:gap-12">
         {howItWorks.points.map((point) => (
-          <div key={point.title}>
-            <h3 className="text-[18px] leading-7 font-medium text-ink">
-              {point.title}
-            </h3>
-            <p className="mt-2 text-[15px] leading-6 text-ink-muted md:text-[16px] md:leading-7">
-              {point.body}
-            </p>
+          <div key={point.title} className="flex flex-col gap-6">
+            <div>
+              <h3 className="text-[18px] leading-7 font-medium text-ink">
+                {point.title}
+              </h3>
+              <p className="mt-2 text-[15px] leading-6 text-ink-muted md:text-[16px] md:leading-7">
+                {point.body}
+              </p>
+            </div>
+            <AppScreenshot
+              src={point.screenshot.src}
+              alt={point.screenshot.alt}
+              caption={point.screenshot.caption}
+            />
           </div>
         ))}
       </div>

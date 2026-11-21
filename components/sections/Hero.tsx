@@ -1,7 +1,7 @@
 import { hero } from "@/content/site";
+import { AppScreenshot } from "../AppScreenshot";
 import { Button } from "../Button";
 import { Orb } from "../Orb";
-import { PhoneMock } from "../PhoneMock";
 import { Reveal } from "../Reveal";
 
 export function Hero() {
@@ -35,8 +35,12 @@ export function Hero() {
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center lg:justify-end lg:pr-6">
             <Orb size="hero" />
           </div>
-          <div className="relative z-10 w-full translate-y-16 sm:translate-y-20">
-            <PhoneMock />
+          <div className="relative z-10 w-full translate-y-10 sm:translate-y-14">
+            <AppScreenshot
+              src={hero.screenshot.src}
+              alt={hero.screenshot.alt}
+              priority
+            />
           </div>
         </div>
       </Reveal>
