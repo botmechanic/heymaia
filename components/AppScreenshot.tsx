@@ -15,8 +15,8 @@ export function AppScreenshot({
   className = "",
 }: AppScreenshotProps) {
   return (
-    <figure className={`mx-auto w-full max-w-[280px] ${className}`}>
-      <div className="overflow-hidden rounded-[1.75rem] border border-hairline bg-surface">
+    <figure className={`mx-auto w-full max-w-[320px] md:max-w-[360px] ${className}`}>
+      <div className="overflow-hidden rounded-[2rem] border border-hairline bg-surface">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={src}

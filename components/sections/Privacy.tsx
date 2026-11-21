@@ -16,7 +16,7 @@ export function Privacy() {
         {privacy.title}
       </h2>
 
-      <div className="mt-12 grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-14">
+      <div className="mt-12 grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-14">
         <ul className="grid gap-6 sm:grid-cols-3 lg:grid-cols-1 lg:gap-8">
           {privacy.statements.map((item) => (
             <li key={item.title}>
