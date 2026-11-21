@@ -5,6 +5,7 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { Hero } from "@/components/sections/Hero";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Install } from "@/components/sections/Install";
+import { Languages } from "@/components/sections/Languages";
 import { Privacy } from "@/components/sections/Privacy";
 import { Support } from "@/components/sections/Support";
 import { UnderTheHood } from "@/components/sections/UnderTheHood";
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <Privacy />
         <HowItWorks />
+        <Languages />
         <Features />
         <UnderTheHood />
         <Install />

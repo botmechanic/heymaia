@@ -124,6 +124,65 @@ export const howItWorks = {
   ],
 } as const;
 
+export const languages = {
+  id: "languages",
+  eyebrow: "Languages",
+  title: "Speak in your own language. Still 100% offline.",
+  subtitle:
+    "Maia's interface, voice, crisis safety, and on-device Gemma model work natively across six languages—no cloud translation required.",
+  note: "Supports Android 13+ per-app language settings, offline device TTS, and multilingual on-device safety.",
+  items: [
+    {
+      id: "en",
+      label: "English",
+      lang: "en",
+      greeting:
+        "Hi, I'm Maia — A companion that lives only on your phone.",
+      badge: "ON DEVICE",
+    },
+    {
+      id: "fr",
+      label: "Français",
+      lang: "fr",
+      greeting:
+        "Bonjour, je suis Maia — Une compagne qui vit uniquement sur votre téléphone.",
+      badge: "SUR L'APPAREIL",
+    },
+    {
+      id: "es",
+      label: "Español",
+      lang: "es",
+      greeting:
+        "Hola, soy Maia — Una compañera que vive solo en tu teléfono.",
+      badge: "EN EL DISPOSITIVO",
+    },
+    {
+      id: "pt",
+      label: "Português",
+      lang: "pt",
+      greeting:
+        "Olá, eu sou a Maia — Uma companheira que vive apenas no seu celular.",
+      badge: "NO DISPOSITIVO",
+    },
+    {
+      id: "de",
+      label: "Deutsch",
+      lang: "de",
+      greeting:
+        "Hallo, ich bin Maia — Eine Begleiterin, die nur auf deinem Smartphone lebt.",
+      badge: "AUF DEM GERÄT",
+    },
+    {
+      id: "ja",
+      label: "日本語",
+      lang: "ja",
+      greeting:
+        "こんにちは、Maiaです — あなたのスマホの中だけで生きるパートナー。",
+      badge: "オンデバイス",
+    },
+  ],
+} as const;
+
 export const features = {
   title: "What she offers",
   items: [
