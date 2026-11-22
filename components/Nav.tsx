@@ -10,7 +10,7 @@ export function Nav() {
   return (
     <NavScroll>
       <div className="px-5 md:px-8">
-        <div className="relative mx-auto flex h-16 w-full min-w-0 max-w-6xl items-center justify-between gap-4 md:h-[4.25rem]">
+        <div className="relative mx-auto flex h-16 w-full min-w-0 max-w-[1200px] items-center justify-between gap-4 md:h-[4.25rem]">
           <a
             href="#top"
             className="inline-flex min-h-11 items-center gap-2.5 rounded-full pr-2 text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-maia-presence"

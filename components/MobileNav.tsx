@@ -52,7 +52,7 @@ export function MobileNav() {
         >
           <nav
             aria-label="Mobile"
-            className="mx-auto flex w-full min-w-0 max-w-6xl flex-col gap-1"
+            className="mx-auto flex w-full min-w-0 max-w-[1200px] flex-col gap-1"
           >
             {nav.links.map((item) => (
               <a
