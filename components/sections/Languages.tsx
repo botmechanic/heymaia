@@ -2,7 +2,6 @@
 
 import { useId, useState } from "react";
 import { languages } from "@/content/site";
-import { Orb } from "../Orb";
 import { Section } from "../Section";
 
 type LanguageId = (typeof languages.items)[number]["id"];
@@ -25,17 +24,9 @@ export function Languages() {
   }
 
   return (
-    <Section id={languages.id}>
-      <div className="flex items-center gap-3">
-        <Orb size="marker" />
-        <p className="text-[14px] leading-5 text-ink-muted">
-          {languages.eyebrow}
-        </p>
-      </div>
-      <h2 className="mt-4 max-w-[20ch] font-display text-[32px] leading-[38px] font-medium text-ink md:text-[44px] md:leading-[50px]">
-        {languages.title}
-      </h2>
-      <p className="prose-measure mt-5 text-[15px] leading-6 text-ink-muted md:text-[16px] md:leading-7">
+    <Section id={languages.id} label={languages.label} surface>
+      <h2 className="type-h2 max-w-[20ch] text-ink">{languages.title}</h2>
+      <p className="type-lead prose-measure mt-5 text-ink-muted">
         {languages.subtitle}
       </p>
 

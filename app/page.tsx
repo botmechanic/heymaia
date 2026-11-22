@@ -1,5 +1,6 @@
 import { Footer } from "@/components/Footer";
 import { Nav } from "@/components/Nav";
+import { FactsStrip } from "@/components/sections/FactsStrip";
 import { Features } from "@/components/sections/Features";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { Hero } from "@/components/sections/Hero";
@@ -9,6 +10,7 @@ import { Languages } from "@/components/sections/Languages";
 import { Privacy } from "@/components/sections/Privacy";
 import { Support } from "@/components/sections/Support";
 import { UnderTheHood } from "@/components/sections/UnderTheHood";
+import { UseCases } from "@/components/sections/UseCases";
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
       <Nav />
       <main id="main" className="flex-1">
         <Hero />
+        <FactsStrip />
+        <UseCases />
         <Privacy />
         <HowItWorks />
         <Languages />

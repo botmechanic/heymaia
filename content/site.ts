@@ -27,6 +27,7 @@ export const metadataCopy = {
 export const nav = {
   wordmark: "Maia",
   links: [
+    { label: "Use cases", href: "#use-cases" },
     { label: "How it works", href: "#how-it-works" },
     { label: "Privacy", href: "#privacy" },
     { label: "Install", href: "#install" },
@@ -64,11 +65,133 @@ export const hero = {
   subline: metadataCopy.description,
   primaryCta: { label: "Get Maia on GitHub", href: links.github },
   secondaryCta: { label: "How it works", href: "#how-it-works" },
+  useCasesLink: {
+    label: "See what people use Maia for",
+    href: "#use-cases",
+  },
   screenshot: screenshots.talk,
+} as const;
+
+export const factsStrip = {
+  items: [
+    { label: "Network permission", figure: "None" },
+    { label: "Model", figure: "Gemma 3 1B, on device" },
+    { label: "Storage", figure: "Encrypted (SQLCipher)" },
+    { label: "License", figure: "Apache 2.0" },
+  ],
+} as const;
+
+export const useCases = {
+  id: "use-cases",
+  label: "02 — Use cases",
+  title: "Two reasons people keep Maia close.",
+  lead: "For thoughts too private for the cloud, and for the moments the cloud isn't there.",
+  cases: [
+    {
+      id: "coach",
+      category: "Too private for the cloud",
+      title: "A coach who remembers, and keeps it to herself.",
+      paragraphs: [
+        "Maia remembers your goals, setbacks and the patterns you mention over weeks and months, so each conversation picks up where you left off. Work worries, money stress, relationships, the things you'd never type into a cloud app: all of it stays on your phone.",
+        "She's a companion and coach, not a therapist; if you're struggling, she'll point you to real people who can help.",
+      ],
+      conversation: {
+        caption: "Illustrative conversation",
+        messages: [
+          {
+            role: "user" as const,
+            text: "I keep saying I'll start running and then skip it.",
+          },
+          {
+            role: "maia" as const,
+            text: "Last month you told me mornings work better than evenings because your head is clearer. Want to try three short morning runs this week and check in Sunday?",
+            memory: "Remembered · mornings work better for you",
+          },
+        ],
+      },
+    },
+    {
+      id: "trading",
+      category: "Too private for the cloud",
+      title: "A calm voice between trades.",
+      paragraphs: [
+        "I trade prop-firm accounts during the New York session. I use Maia to plan my morning and to talk myself down when I'm about to overtrade or go on tilt. She remembers my own rules and the mistakes I keep repeating, and my trading journal never leaves my phone.",
+        "Maia never gives trading advice; she helps you stick to the plan you made when you were calm.",
+      ],
+      attribution: "— Founder, Maia",
+      conversation: {
+        caption: "Illustrative conversation",
+        messages: [
+          {
+            role: "user" as const,
+            text: "Two losses already. I want to size up and win it back.",
+          },
+          {
+            role: "maia" as const,
+            text: "Last Tuesday you said sizing up after two losses is exactly where it goes wrong. Your rule was to step away for 15 minutes. Want to take the break and talk it through after?",
+            memory: "Remembered · your two-loss rule",
+          },
+        ],
+      },
+    },
+    {
+      id: "emergency",
+      category: "When the cloud isn't there",
+      tag: "In development",
+      title: "A steady guide when the network goes down.",
+      paragraphs: [
+        "Hurricanes, earthquakes and floods often take out cell service exactly when you need information. Maia runs without a connection, and we're building city packs: verified, dated emergency guides for where you live (starting with Miami: hurricane prep, evacuation zones, after-the-storm safety), shown word for word from official sources rather than improvised by the AI.",
+      ],
+      mutedNote:
+        "Always follow official instructions and call 911 when you can reach it. City packs will show the date they were last verified.",
+      conversation: {
+        caption: "Illustrative · city pack in development",
+        messages: [
+          {
+            role: "user" as const,
+            text: "Power's out and I have no signal. What should I check first?",
+          },
+          {
+            role: "maia" as const,
+            text: "Here's the after-the-storm checklist from your Miami pack:",
+            list: [
+              "Stay away from downed power lines and standing water.",
+              "Never run a generator indoors or in a garage.",
+              "Keep your phone on low power and check on neighbors when it's safe.",
+            ],
+          },
+        ],
+      },
+    },
+  ],
+  more: {
+    title: "More ways people use Maia",
+    items: [
+      {
+        title: "Before a doctor's visit",
+        body: "Keep track of symptoms, medications and questions so you remember what to say. Not medical advice.",
+      },
+      {
+        title: "Where there's no signal",
+        body: "Flights, travel abroad without roaming, remote trips.",
+      },
+      {
+        title: "Thinking about confidential work",
+        body: "Talk through things you can't put into a cloud AI.",
+      },
+      {
+        title: "Practicing a language",
+        body: "Six on-device languages for everyday conversation.",
+        href: "#languages",
+        linkLabel: "See languages",
+      },
+    ],
+  },
 } as const;
 
 export const privacy = {
   id: "privacy",
+  label: "03 — Privacy",
   title: "Private isn't a setting. It's how she's built.",
   screenshot: screenshots.privacy,
   statements: [
@@ -102,6 +225,7 @@ export const privacy = {
 
 export const howItWorks = {
   id: "how-it-works",
+  label: "04 — Memory",
   title: "A memory you can see, and correct.",
   flow: [
     { label: "You talk" },
@@ -126,6 +250,7 @@ export const howItWorks = {
 
 export const languages = {
   id: "languages",
+  label: "05 — Languages",
   eyebrow: "Languages",
   title: "Speak in your own language. Still 100% offline.",
   subtitle:
@@ -184,6 +309,7 @@ export const languages = {
 } as const;
 
 export const features = {
+  label: "06 — Features",
   title: "What she offers",
   items: [
     {
@@ -220,6 +346,7 @@ export const features = {
 } as const;
 
 export const underTheHood = {
+  label: "07 — Under the hood",
   title: "Under the hood",
   intro: "For hobbyists who want the stack, not the slogan.",
   specs: [
@@ -260,6 +387,7 @@ export const underTheHood = {
 
 export const install = {
   id: "install",
+  label: "08 — Install",
   title: "Requirements and install",
   earlyNote:
     "Early release: setup takes a few minutes and needs a computer.",
@@ -315,6 +443,7 @@ export const install = {
 
 export const support = {
   id: "support",
+  label: "09 — Support",
   title: "Built in the open. Funded by people who want this to exist.",
   body: "Maia has no ads and no data harvesting. The open-source build is free. Sponsorship funds independent development, test devices, and on-device AI research.",
   milestones: [
@@ -338,12 +467,18 @@ export const support = {
 } as const;
 
 export const faq = {
+  label: "10 — Questions",
   title: "Questions",
   items: [
     {
       question: "Is it really offline?",
       answer:
         "The app declares no INTERNET permission and strips network permissions that dependencies might try to add. A unit test in the repo checks the merged manifest. Chat and memory run on the phone. Voice still uses Android system speech services unless you type instead.",
+    },
+    {
+      question: "Can Maia help in an emergency?",
+      answer:
+        "Today Maia works fully offline, so you can talk things through without a signal. Verified city packs are in development. She never replaces emergency services or official instructions.",
     },
     {
       question: "What about voice?",

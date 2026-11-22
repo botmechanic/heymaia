@@ -10,15 +10,13 @@ export function Hero() {
       id="top"
       className="overflow-hidden px-5 pb-16 pt-10 md:px-8 md:pb-24 md:pt-16"
     >
-      <Reveal className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <Reveal className="mx-auto grid max-w-[1200px] items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
-          <p className="text-[14px] leading-5 tracking-[0.02em] text-ink-muted md:text-[15px] md:leading-6">
-            {hero.overline}
-          </p>
-          <h1 className="mt-4 max-w-[14ch] font-display text-[44px] leading-[48px] font-medium text-ink md:text-[64px] md:leading-[68px]">
+          <p className="type-label text-ink-muted">{hero.overline}</p>
+          <h1 className="type-display mt-4 max-w-[14ch] text-ink">
             {hero.headline}
           </h1>
-          <p className="prose-measure mt-6 text-[17px] leading-7 text-ink-muted md:text-[18px] md:leading-[30px]">
+          <p className="type-lead prose-measure mt-6 text-ink-muted">
             {hero.subline}
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -29,6 +27,11 @@ export function Hero() {
               {hero.secondaryCta.label}
             </Button>
           </div>
+          <p className="mt-5">
+            <a href={hero.useCasesLink.href} className="link-ink type-small">
+              {hero.useCasesLink.label}
+            </a>
+          </p>
         </div>
 
         <div className="relative flex min-h-[28rem] items-center justify-center lg:min-h-[32rem] lg:justify-end">
